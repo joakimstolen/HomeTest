@@ -23,15 +23,6 @@ public class OrderController : ControllerBase
         _orderService = orderService;
     }
 
-    [HttpGet(Name = "GetOrders")]
-    public string Get()
-    {
-        return "";
-    }
-
-
-
-
     [HttpPost("UploadCsvFile")]
     public async Task<IActionResult> UploadFile(IFormFile file)
     {

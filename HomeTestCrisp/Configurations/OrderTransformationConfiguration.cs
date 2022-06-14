@@ -6,6 +6,7 @@ namespace HomeTestCrisp.Configurations
 		public int OrderNumber, Year, Month, Day;
 		public string ProductNumber, ProductName, Count;
 
+
 		public OrderTransformationConfiguration(string[] values)
 		{
 			this.OrderNumber = Convert.ToInt32(values[0]);

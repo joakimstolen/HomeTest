@@ -30,7 +30,6 @@ namespace HomeTestCrisp.Services
                 return null;
             }
 
-            Console.WriteLine("FILE {0}", file.ToString());
             List<string> lineValues = new List<string>();
 
             using (var reader = new StreamReader(file.OpenReadStream()))
@@ -42,7 +41,7 @@ namespace HomeTestCrisp.Services
                 {
                     lineValues.Add(line);
 
-                    Console.WriteLine("LINE IN READFROMFILE {0}", line);
+                    _logger.LogInformation($"Adding line {line} to list.");
                 }
                 return lineValues;
             }
@@ -71,13 +70,10 @@ namespace HomeTestCrisp.Services
                     string[] values;
                     values = parser.ReadFields();
 
-                    Console.WriteLine("VALUES {0}", values[0]);
-
-                    var newListOfValues = values.Take(7).ToArray();
 
                     try
                     {
-                        OrderTransformationConfiguration rawOrder = new OrderTransformationConfiguration(newListOfValues);
+                        OrderTransformationConfiguration rawOrder = new OrderTransformationConfiguration(values);
                         listOfRawOrderData.Add(rawOrder);
                     }
                     catch (Exception e)

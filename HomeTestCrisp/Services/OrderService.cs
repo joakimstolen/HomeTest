@@ -17,6 +17,11 @@ namespace HomeTestCrisp.Services
             _logger = logger;
         }
 
+        public OrderService()
+        {
+            
+        }
+
 
         public async Task<List<string>> ReadFormFileAsync(IFormFile file)
         {
@@ -25,7 +30,7 @@ namespace HomeTestCrisp.Services
                 return null;
             }
 
-
+            Console.WriteLine("FILE {0}", file.ToString());
             List<string> lineValues = new List<string>();
 
             using (var reader = new StreamReader(file.OpenReadStream()))

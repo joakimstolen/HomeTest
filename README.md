@@ -76,7 +76,7 @@ I wrote unit tests for all the service-methods, achieving a test coverage of 74,
 
 ## Next steps
 
-* I would like to implement a database for storing transformed csv-data. Here i would follow API-design principles and add a Repository with a DatabaseContext, and fully utilize the .NET Entity Framework. 
+* I would like to implement a database for storing transformed csv-data. Here i would follow API-design principles and add a Repository with a DatabaseContext, and fully utilize the .NET Entity Framework, and following the [Repository-Service pattern](https://exceptionnotfound.net/the-repository-service-pattern-with-dependency-injection-and-asp-net-core/). 
 * I would like to complete the CRUD-design (Create, Read, Update, Delete) for the API.
 * I would like to create a more thorough and detailed transformation. Taking more unknown variables into consideration. 
 

@@ -3,17 +3,8 @@ namespace HomeTestCrisp.Models
 {
 	public class Order
 	{
-
-		//int orderId, DateTime orderDate, string productId, string productName, decimal quantity, string unit
-
 		public Order()
 		{
-			//OrderID = orderId;
-			//OrderDate = orderDate;
-			//ProductId = productId;
-			//ProductName = productName;
-			//Quantity = quantity;
-			//Unit = unit; 
 		}
 
 

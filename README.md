@@ -41,7 +41,7 @@ Download [Visual Studio](https://visualstudio.microsoft.com/downloads/) or [Visu
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
+The API can be found in its own seperate class library (HomeTestCrisp). 
 To use the API, launch the project as described above. And when the Swagger GUI has launched, you can now do a POST-request to the endpoint /api/Orders/UploadCsvFile.
 The endpoint takes a .csv file as a parameter. To add a .csv file, expand the endpoint in Swagger, select "Try it out" and then click "Select a file". When you have selected a file, you can execute the command. 
 To test the API you can download [this sample .csv file](https://gist.github.com/daggerrz/99e766b4660e3c0ed26517beaea6449a).
@@ -64,6 +64,8 @@ The API will recieve your .csv file, transform the data into the desired state a
 
 ## Tests
 I wrote unit tests for all the service-methods, achieving a test coverage of 74,5%. All tests run. For unit testing i used the testing framework xUnit, which is one of the reccomended testing frameworks to use with .NET / ASP.NET.
+
+The unit tests can be found in its own seperate class library (HomeTestCrispTests). 
 
 * To run the tests: 
   * In Visual Studio toolbar: click the "Test" tab, then click "Run All Tests".

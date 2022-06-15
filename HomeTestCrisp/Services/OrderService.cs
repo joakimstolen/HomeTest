@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using HomeTestCrisp.Configurations;
 using HomeTestCrisp.Interfaces;
@@ -105,7 +106,7 @@ namespace HomeTestCrisp.Services
                 order.OrderDate = CreateDateObject(data.Day, data.Month, data.Year);
                 order.ProductId = data.ProductNumber;
                 order.ProductName = data.ProductName;
-                order.Quantity = decimal.Parse(data.Count);
+                order.Quantity = decimal.Parse(data.Count, CultureInfo.InvariantCulture);
                 order.Unit = "kg";
 
                 listOfTransformedOrders.Add(order);

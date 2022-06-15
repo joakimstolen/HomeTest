@@ -4,7 +4,6 @@ using HomeTestCrisp.Interfaces;
 using HomeTestCrisp.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Moq;
 
 namespace HomeTestCrispTests;
 

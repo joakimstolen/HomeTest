@@ -23,6 +23,15 @@ public class OrderController : ControllerBase
         _orderService = orderService;
     }
 
+
+
+    /// <summary>
+    /// Transform a .csv file. 
+    /// </summary>
+    /// <param name="file"></param>
+    /// <returns>A list of transformed CSV data in a list of C# models.</returns>
+    /// 
+    [ProducesResponseType(typeof(List<Order>), StatusCodes.Status200OK)]
     [HttpPost("UploadCsvFile")]
     public async Task<IActionResult> UploadFile(IFormFile file)
     {
